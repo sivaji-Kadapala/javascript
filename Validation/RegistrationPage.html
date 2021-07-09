@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <h1>Registration</h1>
+    <div class="col-md-4 offset-md-4 mx-auto">
+      <form
+        action=""
+        name="loginform"
+        onsubmit="return onFormSubmit()"
+        method="GET"
+      >
+        <!-- first name -->
+        <div class="form-group">
+          <label for="fname"> First Name: </label>
+          <input type="text" name="fname" class="form-control" id="fname" />
+        </div>
+        <!-- last name -->
+        <div class="form-group">
+          <label for="lname"> Last Name: </label>
+          <input type="text" name="lname" class="form-control" id="lname" />
+        </div>
+        <!-- age -->
+        <div class="form-group">
+          <label for="age"> Age: </label>
+          <input type="number" name="age" class="form-control" id="age" />
+        </div>
+        <!-- mobile number -->
+        <div class="form-group">
+          <label for="mobilenumber">Mobile Number:</label>
+          <input type="number" name="mobilenumber" class="form-control" id="mobilenumber" />
+          
+        </div>
+        <!-- email -->
+        <div class="form-group">
+          <label for="email"> Email: </label>
+          <input type="email" name="email" class="form-control" id="email" />
+        </div>
+        <!-- password -->
+        <div class="form-group">
+          <label for="password"> Password: </label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+          />
+        </div>
+        <!-- confirm password -->
+        <div class="form-group">
+          <label for="confirmpassword"> Confirm password: </label>
+          <input
+            type="password"
+            name="confirmpassword"
+            class="form-control"
+            id="confirmpassword"
+          />
+        </div>
+        <button class="btn btn-primary float-right" onClick="store()">
+          Login
+        </button>
+      </form>
+    </div>
+    <script>
+      // Name and Password from the register-form
+      var firstName = document.getElementById("fname");
+      var lastName = document.getElementById("lname");
+      var Age = document.getElementById("age");
+      var MobileNumber = document.getElementById("mobilenumber");
+      
+       var Email = document.getElementById('email');
+        var Password = document.getElementById('password');
+      var Confirmpassword = document.getElementById("confirmpassword");
+
+      //storing input from register-form
+      function store() {
+        localStorage.setItem("fname", firstName.value);
+        localStorage.setItem("lname", lastName.value);
+        localStorage.setItem("age", Age.value);
+        localStorage.setItem("mobilenumber", MobileNumber.value);
+       
+        localStorage.setItem('email', Email.value);
+        localStorage.setItem('password', Password.value);
+        
+        localStorage.setItem("confirmpassword", Confirmpassword.value);
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var brand = "HRx";
+        console.log(brand);//global scope
+        //-----
+        function getBrand(){
+            var brand="adidas";
+            console.log(brand);//function scope
+        }
+        getBrand();
+        //-------Block level scope
+        if(true){
+            var brand="Nike";//block scope,it have also global scope,it access in other bloc also
+            console.log(brand);
+        }
+        console.log(brand);//Nike
+         if (true) {
+                let brand = "Nike";//block scope,it have also global scope,it access in other bloc also
+                console.log(brand);
+            }
+            console.log(brand);//Nike
+    </script>
+</body>
+</html>

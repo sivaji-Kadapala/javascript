@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const myPromise=new Promise((resolve,reject)=>{
+        //     if(true){
+        //         resolve('true');
+                
+        //     }
+        //     else{
+        //         reject('false')
+        //     }
+        // })
+        // console.log(myPromise);
+        // myPromise.then((resp)=>{
+        //     console.log(resp);
+        // }).catch((err)=>{
+        //     console.log(err);
+        // });
+        // fetch('./Json.json').then((resp)=>{
+        //     console.log(resp);
+        // }).catch((err)=>{
+        //     console.log(err))
+        // }
+        // axios.get('./Json.json').then(res=>{console.log(resp.data);})
+        //converting to json format
+        var obj={
+            place:'bangalore',
+            name:'xyz'
+        }
+        var x= JSON.stringifyobj(obj);
+        console.log(x);
+        var y=JSON.parse(x);
+        console.log(y);
+        localStorage.setItem('id',JSON.stringify(obj))
+    </script>
+</body>
+</html>

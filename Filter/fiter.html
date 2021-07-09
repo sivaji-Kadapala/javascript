@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- The filter method creates a new array with all elements that pass the test provided by call back function -->
+    <!-- filter(element,index,array) -->
+    <script>
+        const user=[
+            {
+                name:"sivaji",
+                age:24
+            },
+            {
+                name:"siva",
+                age:26
+            }
+        ];
+        let filterUser=user.filter((user)=>user.name==='sivaji');
+        console.log(filterUser);
+    </script>
+</body>
+</html>
