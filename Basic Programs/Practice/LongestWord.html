@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function longestWord(str) {
+            var words=str.split(" ");
+            var longest=" ";
+            for(var word of words)
+            {
+                if(word.length>longest.length)
+                {
+                    longest=word;
+                }
+            }
+            console.log(longest)
+        }
+        longestWord("Sivaji from kadapala in Bangalore");
+    </script>
+</body>
+</html>
