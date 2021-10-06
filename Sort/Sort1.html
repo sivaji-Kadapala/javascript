@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const months=["'jan","mar","may","jul","sep","nov"];
+        console.log(months.sort());
+        let array1 = [1, 30, 4, 21, 100000];
+            array1=array1.sort((a,b)=>a-b);
+            console.log(array1);
+            // -----------------------------
+            var items = [
+                    { name: 'Edward', value: 21 },
+                    { name: 'Sharpe', value: 37 },
+                    { name: 'And', value: 45 },
+                    { name: 'The', value: -12 },
+                    { name: 'Magnetic', value: 13 },
+                    { name: 'Zeros', value: 37 }
+                ];
+
+                // sort by value
+                items=items.sort((a, b)=>
+                     a.value - b.value
+                );
+                console.log(items)
+                // ------------------------------------------
+                items.sort( (a, b) =>{
+                        var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+                        var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+                        if (nameA < nameB) {
+                            return -1;
+                        }
+                        if (nameA > nameB) {
+                            return 1;
+                        }
+
+                        // names must be equal
+                        return 0;
+                     } );
+                     console.log(items)
+    </script>
+</body>
+</html>

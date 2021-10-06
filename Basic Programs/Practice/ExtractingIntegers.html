@@ -7,11 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-   <script>
-       var str="sivaji";
-       var result=str.repeat(5);
-       console.log(result);
-       
-   </script> 
+    <script>
+        let str="I finished 60 out of 80 total";
+        let final=str.split(' ').filter(elem=>!isNaN(elem)).map(val=>parseFloat(val));
+        console.log(...final);
+    </script>
 </body>
 </html>
