@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s="sivaji kadapala";
+        var reverseSentence=reverseBySeparator(s,"");
+        var reverseEachWord=reverseBySeparator(reverseSentence," ");
+        function reverseBySeparator(s,separator) {
+            return s.split(separator).reverse().join(separator);
+        }
+        function wordsReverser(string) {
+                return string.split("").reverse().join("").split(" ").reverse().join(" ")
+            }
+
+            console.log(wordsReverser('New string, same results.'));
+            var str = "I LOVE MY COUNTRY";
+                console.log(str.split(/\s/).reverse().join(" "));
+                var name="sivaji kadapala";
+                var arr=name.split(" ");
+                arr.reverse();
+                name=arr.join(" ");
+                console.log(name);
+    </script>
+</body>
+</html>
